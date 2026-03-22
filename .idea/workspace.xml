@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c205bc0-5fcc-40c1-83a9-59673d74a16e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/go.imports.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/ReflectionKit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectedClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectedConstructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectedField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectedMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectedObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rmjtromp/reflection/ReflectionException.java" afterDir="false" />
+    <list default="true" id="8c205bc0-5fcc-40c1-83a9-59673d74a16e" name="Changes" comment="Converted project">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="17" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -97,12 +89,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1774215311192</updated>
-      <workItem from="1774215312297" duration="695000" />
+      <workItem from="1774215312297" duration="1583000" />
     </task>
+    <task id="LOCAL-00001" summary="Converted project">
+      <option name="closed" value="true" />
+      <created>1774216099919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774216099919</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Converted project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted project" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
