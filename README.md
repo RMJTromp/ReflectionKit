@@ -68,6 +68,11 @@ String result = ReflectionKit.query(instance)
 MyObject created = ReflectionKit.query(MyObject.class)
     .constructor()
     .newInstance();
+
+// Chaining `instance.myField.toLowerCase()`
+String loweredValue = ReflectionKit.query(instance)
+    .field("myField").query()
+    .method("toLowerCase").call();
 ```
 
 # License
