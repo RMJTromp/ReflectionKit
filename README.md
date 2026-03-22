@@ -76,7 +76,7 @@ String loweredValue = ReflectionKit.query(instance)
 ```
 
 # License
-This project is subject to the [GNU General Public License v3.0](https://github.com/RMJTromp/ReflectionKit/blob/main/LICENSE). This does only apply for source code located directly in this clean repository.
+This project is subject to the [GNU General Public License v3.0](./LICENSE). This does only apply for source code located directly in this clean repository.
 For those who are unfamiliar with the license, here is a summary of its main points. This is by no means legal advice nor legally binding.
 You are allowed to
 - use
