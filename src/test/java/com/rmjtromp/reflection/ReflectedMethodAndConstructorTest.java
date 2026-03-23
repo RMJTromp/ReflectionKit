@@ -1,6 +1,8 @@
 package com.rmjtromp.reflection;
 
 import com.rmjtromp.ReflectionKit;
+import com.rmjtromp.reflection.mapping.Alias;
+import com.rmjtromp.reflection.mapping.Proxy;
 import org.junit.jupiter.api.Test;
 
 import java.io.Serializable;
@@ -17,6 +19,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@Proxy
+abstract class Handler {
+
+    public Object connection;
+
+}
+
+@Proxy
+abstract class Player {
+
+    @Alias({"h", "_handler"})
+    public Handler handler;
+
+}
 
 class ReflectedMethodAndConstructorTest {
 
