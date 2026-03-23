@@ -101,6 +101,38 @@ class MappedProxyTest {
         public String handler;
     }
 
+    // ─── Version-specific proxy with concrete method calling abstract ones ──
+
+    @SuppressWarnings("unused")
+    static class VersionedTarget {
+        private String name = "Steve";
+
+        // Only the "legacy" method exists on this target
+        public void legacyTeleport(String location) {
+            this.name = "legacy:" + location;
+        }
+        // newerTeleport does NOT exist
+    }
+
+    @Proxy
+    static abstract class VersionedProxy {
+        public String name;
+
+        @Alias("legacyTeleport")
+        protected abstract void legacyTp(String location);
+
+        @Alias("newerTeleport")
+        protected abstract void newerTp(String location);
+
+        public void teleport(String location, boolean useLegacy) {
+            if (useLegacy) {
+                legacyTp(location);
+            } else {
+                newerTp(location);
+            }
+        }
+    }
+
     // ─── Not annotated with @Proxy ──────────────────────────────────
     static abstract class NotAProxy {
         public String name;
@@ -201,6 +233,22 @@ class MappedProxyTest {
     void nonAbstractClassThrows() {
         RealPlayer real = new RealPlayer();
         assertThrows(ReflectionException.class, () -> ReflectionKit.map(real).to(RealPlayer.class));
+    }
+
+    @Test
+    void concreteMethodCallsAbstractLazily() {
+        VersionedTarget target = new VersionedTarget();
+        VersionedProxy proxy = ReflectionKit.map(target).to(VersionedProxy.class);
+
+        // Proxy creation succeeds even though newerTeleport doesn't exist on target
+        assertEquals("Steve", proxy.name);
+
+        // Calling the branch that exists works fine
+        proxy.teleport("nether", true);
+        assertEquals("legacy:nether", target.name);
+
+        // Calling the branch that doesn't exist throws at call time
+        assertThrows(ReflectionException.class, () -> proxy.teleport("end", false));
     }
 
 }
